@@ -20,9 +20,8 @@ public class ExampleJavaMod extends Mod{
             //show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("frog");
-                dialog.cont.add("behold").row();
+                dialog.cont.add("Welcome to Factory Mania\n\n\t This mod is actually in active development and is not ready to be played\n\t Come back later to check for new content").row();
                 //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
-                dialog.cont.image(Core.atlas.find("example-java-mod-blast-furnace")).pad(30f).row();
                 dialog.cont.button("I see", dialog::hide).size(100f, 50f);
                 dialog.show();
             });
@@ -32,7 +31,6 @@ public class ExampleJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
-        Log.info("is that right ?");
     }
 
 }
