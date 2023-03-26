@@ -10,10 +10,10 @@ import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import mindustry.world.blocks.production.*;
 
-public class ExampleJavaMod extends Mod{ 
+public class FactoryManiaMain extends Mod{ 
 
-    public ExampleJavaMod(){
-        Log.info("Loaded ExampleJavaMod constructor.");
+    public FactoryManiaMain(){
+        Log.info("Loaded FactoryMania constructor.");
 
         //listen for game load event
         Events.on(ClientLoadEvent.class, e -> {
@@ -22,7 +22,9 @@ public class ExampleJavaMod extends Mod{
                 BaseDialog dialog = new BaseDialog("frog");
                 dialog.cont.add("Welcome to Factory Mania\n\n\t This mod is actually in active development and is not ready to be played\n\t Come back later to check for new content").row();
                 //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
-                dialog.cont.button("I see", dialog::hide).size(100f, 50f);
+                dialog.cont.image(Core.atlas.find("factory-mania-blast-furnace")).pad(20f).row();
+                dialog.cont.button("I see", dialog::hide).size(100f, 50f).row();
+                dialog.cont.add("And this is text under the button").pad(50f);
                 dialog.show();
             });
         });

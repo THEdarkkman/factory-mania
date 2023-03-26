@@ -9,7 +9,7 @@
     author: THEdarkkman
 
     #the fully qualified main class of the mod
-    main: "example.ExampleJavaMod"
+    main: example.FactoryManiaMain
 
     #the mod description as seen in the mod dialog
     description: A mindustry mod that adds several factories to enrich your gameplay
