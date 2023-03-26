@@ -1,4 +1,4 @@
-package example;
+package factorymania;
 
 import arc.*;
 import arc.util.*;
@@ -34,5 +34,4 @@ public class FactoryManiaMain extends Mod{
     public void loadContent(){
         Log.info("Loading some example content.");
     }
-
 }
